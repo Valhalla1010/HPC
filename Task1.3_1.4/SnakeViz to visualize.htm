@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" .="">
+<title>C:\Users\davii\OneDrive - Mittuniversitetet\Skrivbordet\KTH\Fjärde_år\VT\Intro_to_HPC(DD2358)\Assignment_1\task1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="SnakeViz%20to%20visualize_files/snakeviz.css" rel="stylesheet">
+<!-- DataTables CSS -->
+<link href="SnakeViz%20to%20visualize_files/jquery.dataTables.min.css" rel="stylesheet">
+</head>
+<body>
+<h1 id="snakeviz-text">
+<a href="https://jiffyclub.github.io/snakeviz/">SnakeViz</a>
+</h1>
+<!-- reset button -->
+<span id="resetbuttons">
+<div class="button-div">
+<button id="resetbutton-root" disabled="True">Reset Root</button>
+</div>
+<div class="button-div">
+<button id="resetbutton-zoom" disabled="True">Reset Zoom</button>
+</div>
+</span>
+<!-- style select -->
+<label id="sv-style-label">Style:&nbsp;
+<select name="sv-style" id="sv-style-select">
+<option value="icicle" selected="selected">Icicle</option>
+<option value="sunburst">Sunburst</option>
+</select>
+</label>
+<!-- depth select -->
+<label id="sv-depth-label">Depth:&nbsp;
+<select name="sv-depth" id="sv-depth-select">
+
+<option value="3">3</option>
+
+<option value="5">5</option>
+
+<option value="10" selected="selected">10</option>
+
+<option value="15">15</option>
+
+<option value="20">20</option>
+
+</select>
+</label>
+<!-- cutoff select -->
+<label id="sv-cutoff-label">Cutoff:
+<select name="sv-cutoff" id="sv-cutoff-select">
+<option value="0.001" selected="selected">1 ⁄ 1000</option>
+<option value="0.01">1 ⁄ 100</option>
+<option value="0">None</option>
+</select>
+</label>
+<!-- information div -->
+<div id="sv-info-div" class="icicle" style="height: 567.6px; width: 200px; display: none;"><div class="sv-info-label">Name:</div>
+<div class="sv-info-item">calc_pure_python</div>
+<div class="sv-info-label">Cumulative Time:</div>
+<div class="sv-info-item">12.8 s (100.00 %)</div>
+<div class="sv-info-label">File:</div>
+<div class="sv-info-item">c:\Users\davii\OneDrive - Mittuniversitetet\Skrivbordet\KTH\Fjärde_år\VT\Intro_to_HPC(DD2358)\Assignment_1\task1.3\JuliaSet.py</div>
+<div class="sv-info-label">Line:</div>
+<div class="sv-info-item">21</div>
+<div class="sv-info-label">Directory:</div>
+<div class="sv-info-item"></div></div>
+<!-- call stack -->
+<div id="sv-call-stack">
+<div id="working-spinner" class="spinner" style="display: none;">
+<div class="bounce1"></div>
+<div class="bounce2"></div>
+<div class="bounce3"></div>
+</div>
+<div style="display: inline-block;">
+<button id="sv-call-stack-btn">Call Stack</button>
+</div>
+<div id="sv-call-stack-list"><div><span>0.&nbsp;</span><span>c:
+\Users\davii\OneDrive - 
+Mittuniversitetet\Skrivbordet\KTH\Fjärde_år\VT\Intro_to_HPC(DD2358)\Assignment_1\task1.3\JuliaSet.py:21(calc_pure_python)</span></div></div>
+</div>
+<!-- Error message -->
+<div id="sv-error-div" class="sv-error-msg">
+<p>
+An error occurred processing your profile.
+You can try a lower depth, a larger cutoff,
+or try profiling a smaller portion of your code.
+If you continue to have problems you can
+<a href="https://github.com/jiffyclub/snakeviz/issues">
+contact us on GitHub</a>.
+</p>
+<div id="sv-error-close-div" class="sv-error-close">Close</div>
+</div>
+<!-- vis -->
+<div style="text-align: center;">
+<div id="chart" style="margin-left: auto; margin-right: auto;"><svg width="718.5" height="756"><g id="container" transform="translate(90,60)"><rect id="path-0" x="0" y="0" width="628.5" height="69.60000000000001" fill-rule="evenodd" fill="#3182bd" style="fill: rgb(49, 130, 189);"></rect><rect id="path-1" x="0" y="69.60000000000001" width="594.0940668108013" height="69.60000000000001" fill-rule="evenodd" fill="#6baed6" style="fill: rgb(107, 174, 214);"></rect><rect id="path-2" x="385.4711029253514" y="139.20000000000002" width="208.62296388544996" height="69.60000000000001" fill-rule="evenodd" fill="#9ecae1" style="fill: rgb(158, 202, 225);"></rect><rect id="path-3" x="0" y="139.20000000000002" width="385.4711029253514" height="69.60000000000001" fill-rule="evenodd" fill="#6baed6" style="fill: rgb(107, 174, 214);"></rect><rect id="path-4" x="620.1010673998361" y="69.60000000000001" width="8.398932600163823" height="69.60000000000001" fill-rule="evenodd" fill="#c6dbef"></rect><rect id="path-5" x="594.0940668108013" y="69.60000000000001" width="26.007000589034792" height="69.60000000000001" fill-rule="evenodd" fill="#3182bd" style="fill: rgb(49, 130, 189);"></rect><text x="314.25" y="34.800000000000004" width="628.5" height="69.60000000000001" font-family="sans-serif" font-size="15px" fill="black" text-anchor="middle" pointer-events="none"><tspan text-anchor="middle" x="314.25">JuliaSet.py:21(calc_pure_python)</tspan><tspan text-anchor="middle" x="314.25" dy="1.2em">12.8 s</tspan></text><text x="297.04703340540067" y="104.39999999999999" width="594.0940668108013" height="69.60000000000001" font-family="sans-serif" font-size="15px" fill="black" text-anchor="middle" pointer-events="none"><tspan text-anchor="middle" x="297.04703340540067">JuliaSet.py:59(calculate_z_serial_purepython)</tspan><tspan text-anchor="middle" x="297.04703340540067" dy="1.2em">12.1 s</tspan></text><text x="192.7355514626757" y="174" width="385.4711029253514" height="69.60000000000001" font-family="sans-serif" font-size="15px" fill="black" text-anchor="middle" pointer-events="none"><tspan text-anchor="middle" x="192.7355514626757">JuliaSet.py:59(calculate_z_serial_purepython)</tspan><tspan text-anchor="middle" x="192.7355514626757" dy="1.2em">12.1 s</tspan></text></g></svg></div>
+</div>
+<br>
+<!-- stats table -->
+<div id="table_div">
+<div id="pstats-table_wrapper" class="dataTables_wrapper no-footer"><div id="pstats-table_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="pstats-table"></label></div><table cellpadding="0" cellspacing="0" border="0" class="display dataTable no-footer" id="pstats-table" role="grid" aria-describedby="pstats-table_info" style="width: 906px;">
+<thead>
+<tr role="row"><th title="Total number of calls to the function. If there are two numbers, that means the function recursed and the first is the total number of calls and the second is the number of primitive (non-recursive) calls." class="sorting" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 62px;" aria-label="ncalls: activate to sort column ascending">ncalls</th><th title="Total time spent in the function, not including time spent in calls to sub-functions." class="sorting_desc" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 63px;" aria-sort="descending" aria-label="tottime: activate to sort column ascending">tottime</th><th title="`tottime` divided by `ncalls`" class="sorting" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 62px;" aria-label="percall: activate to sort column ascending">percall</th><th title="Cumulative time spent in this function and all sub-functions." class="sorting" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 75px;" aria-label="cumtime: activate to sort column ascending">cumtime</th><th title="`cumtime` divided by `ncalls`" class="sorting" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 62px;" aria-label="percall: activate to sort column ascending">percall</th><th title="File name and line number were the function is defined, and the function’s name." class="sorting" tabindex="0" aria-controls="pstats-table" rowspan="1" colspan="1" style="width: 366px;" aria-label="filename:lineno(function): activate to sort column ascending">filename:lineno(function)</th></tr>
+</thead>
+<tbody><tr role="row" class="odd"><td class="">1</td><td class="sorting_1">7.824</td><td class="">7.824</td><td class="">12.06</td><td class="">12.06</td><td class="">JuliaSet.py:59(calculate_z_serial_purepython)</td></tr><tr role="row" class="even"><td class="">34219980</td><td class="sorting_1">4.235</td><td class="">1.237e-07</td><td class="">4.235</td><td class="">1.237e-07</td><td class="">~:0(&lt;built-in method builtins.abs&gt;)</td></tr><tr role="row" class="odd"><td class="">1</td><td class="sorting_1">0.5279</td><td class="">0.5279</td><td class="">12.77</td><td class="">12.77</td><td class="">JuliaSet.py:21(calc_pure_python)</td></tr><tr role="row" class="even"><td class="">2002000</td><td class="sorting_1">0.1705</td><td class="">8.515e-08</td><td class="">0.1705</td><td class="">8.515e-08</td><td class="">~:0(&lt;method 'append' of 'list' objects&gt;)</td></tr><tr role="row" class="odd"><td class="">1</td><td class="sorting_1">0.006537</td><td class="">0.006537</td><td class="">0.006537</td><td class="">0.006537</td><td class="">~:0(&lt;built-in method builtins.sum&gt;)</td></tr><tr role="row" class="even"><td class="">3</td><td class="sorting_1">0.002032</td><td class="">0.0006773</td><td class="">0.002032</td><td class="">0.0006773</td><td class="">~:0(&lt;built-in method builtins.print&gt;)</td></tr><tr role="row" class="odd"><td class="">2</td><td class="sorting_1">2e-06</td><td class="">1e-06</td><td class="">2e-06</td><td class="">1e-06</td><td class="">~:0(&lt;built-in method time.time&gt;)</td></tr><tr role="row" class="even"><td class="">4</td><td class="sorting_1">1.9e-06</td><td class="">4.75e-07</td><td class="">1.9e-06</td><td class="">4.75e-07</td><td class="">~:0(&lt;built-in method builtins.len&gt;)</td></tr><tr role="row" class="odd"><td class="">1</td><td class="sorting_1">1.5e-06</td><td class="">1.5e-06</td><td class="">1.5e-06</td><td class="">1.5e-06</td><td class="">~:0(&lt;method 'disable' of '_lsprof.Profiler' objects&gt;)</td></tr></tbody></table><div class="dataTables_info" id="pstats-table_info" role="status" aria-live="polite">Showing 1 to 9 of 9 entries</div></div>
+</div>
+<!-- footer -->
+<footer class="sv-footer">
+<a class="footer-link" href="https://jiffyclub.github.io/snakeviz/">SnakeViz Docs</a>
+</footer>
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- Vendor JS -->
+<script src="SnakeViz%20to%20visualize_files/jquery-3.2.1.min.js"></script>
+<script src="SnakeViz%20to%20visualize_files/d3.v3.min.js"></script>
+<script src="SnakeViz%20to%20visualize_files/jquery.dataTables.min.js"></script>
+<script src="SnakeViz%20to%20visualize_files/lodash.min.js"></script>
+<script src="SnakeViz%20to%20visualize_files/immutable.min.js"></script>
+<!-- SnakeViz JS -->
+<script>
+// Make the stats table
+var table_data = [[['1', 1], '0.5279', '0.5279', '12.77', '12.77', 'JuliaSet.py:21(calc_pure_python)', 'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)'], [['1', 1], '7.824', '7.824', '12.06', '12.06', 'JuliaSet.py:59(calculate_z_serial_purepython)', 'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:59(calculate_z_serial_purepython)'], [['2', 2], '2e-06', '1e-06', '2e-06', '1e-06', '~:0(&lt;built-in method time.time&gt;)', '~:0(<built-in method time.time>)'], [['2002000', 2002000], '0.1705', '8.515e-08', '0.1705', '8.515e-08', '~:0(&lt;method &#x27;append&#x27; of &#x27;list&#x27; objects&gt;)', "~:0(<method 'append' of 'list' objects>)"], [['34219980', 34219980], '4.235', '1.237e-07', '4.235', '1.237e-07', '~:0(&lt;built-in method builtins.abs&gt;)', '~:0(<built-in method builtins.abs>)'], [['4', 4], '1.9e-06', '4.75e-07', '1.9e-06', '4.75e-07', '~:0(&lt;built-in method builtins.len&gt;)', '~:0(<built-in method builtins.len>)'], [['3', 3], '0.002032', '0.0006773', '0.002032', '0.0006773', '~:0(&lt;built-in method builtins.print&gt;)', '~:0(<built-in method builtins.print>)'], [['1', 1], '0.006537', '0.006537', '0.006537', '0.006537', '~:0(&lt;built-in method builtins.sum&gt;)', '~:0(<built-in method builtins.sum>)'], [['1', 1], '1.5e-06', '1.5e-06', '1.5e-06', '1.5e-06', '~:0(&lt;method &#x27;disable&#x27; of &#x27;_lsprof.Profiler&#x27; objects&gt;)', "~:0(<method 'disable' of '_lsprof.Profiler' objects>)"]];
+$(document).ready(function() {
+var table = $('#pstats-table').dataTable({
+'data': table_data,
+'columns': [
+// Note: columns are also defined in #pstats-table in HTML above,
+// this list must line up with that.
+{'type': 'num', 'searchable': 'false',
+'data': {
+'_': function (row) {return row[0][0];},
+'sort': function (row) {return row[0][1]}
+}},
+{'type': 'num', 'searchable': 'false'},
+{'type': 'num', 'searchable': 'false'},
+{'type': 'num', 'searchable': 'false'},
+{'type': 'num', 'searchable': 'false'},
+{}
+],
+'order': [1, 'desc'],
+'paging': false
+}).api();
+$('#pstats-table tbody').on('click', 'tr', function() {
+var name = table.row(this).data()[6];
+sv_root_func_name = name;
+sv_draw_vis(name);
+sv_call_stack = [name];
+sv_update_call_stack_list();
+$('#resetbutton-zoom').prop('disabled', true);
+$('#resetbutton-root').prop('disabled', false);
+}).on('mouseenter', 'tr', function () {
+$(this).children('td').addClass('data-table-hover');
+}).on('mouseleave', 'tr', function () {
+$(this).children('td').removeClass('data-table-hover');
+});
+});
+</script>
+<!-- Web worker code for generating D3 JSON in a separate thread -->
+<script id="hierarchy-worker" type="javascript/worker">
+// This will all go into a web worker that will be used to generate
+// the visualization JSON while leaving the rest of the app responsive.
+//
+// We put this here instead of in a separate JS file so that the worker
+// can be stopped and restarted without loading the code from the server,
+// and so that the stats data can be embedded in the worker.
+var stats = {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': {'children': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:59(calculate_z_serial_purepython)': [1, 1, 7.8241991, 12.0587786], '~:0(<built-in method time.time>)': [2, 2, 2.0000000000000003e-06, 2.0000000000000003e-06], "~:0(<method 'append' of 'list' objects>)": [2002000, 2002000, 0.1704795, 0.1704795], '~:0(<built-in method builtins.len>)': [2, 2, 8.000000000000001e-07, 8.000000000000001e-07], '~:0(<built-in method builtins.print>)': [3, 3, 0.002032, 0.002032], '~:0(<built-in method builtins.sum>)': [1, 1, 0.006536800000000001, 0.006536800000000001]}, 'stats': [1, 1, 0.5278838, 12.7657135], 'callers': {}, 'display_name': 'JuliaSet.py:21(calc_pure_python)'}, 'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:59(calculate_z_serial_purepython)': {'children': {'~:0(<built-in method builtins.abs>)': [34219980, 34219980, 4.2345784, 4.2345784], '~:0(<built-in method builtins.len>)': [2, 2, 1.1e-06, 1.1e-06]}, 'stats': [1, 1, 7.8241991, 12.0587786], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [1, 1, 7.8241991, 12.0587786]}, 'display_name': 'JuliaSet.py:59(calculate_z_serial_purepython)'}, '~:0(<built-in method time.time>)': {'children': {}, 'stats': [2, 2, 2.0000000000000003e-06, 2.0000000000000003e-06], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [2, 2, 2.0000000000000003e-06, 2.0000000000000003e-06]}, 'display_name': '~:0(<built-in method time.time>)'}, "~:0(<method 'append' of 'list' objects>)": {'children': {}, 'stats': [2002000, 2002000, 0.1704795, 0.1704795], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [2002000, 2002000, 0.1704795, 0.1704795]}, 'display_name': "~:0(<method 'append' of 'list' objects>)"}, '~:0(<built-in method builtins.abs>)': {'children': {}, 'stats': [34219980, 34219980, 4.2345784, 4.2345784], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:59(calculate_z_serial_purepython)': [34219980, 34219980, 4.2345784, 4.2345784]}, 'display_name': '~:0(<built-in method builtins.abs>)'}, '~:0(<built-in method builtins.len>)': {'children': {}, 'stats': [4, 4, 1.9e-06, 1.9e-06], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [2, 2, 8.000000000000001e-07, 8.000000000000001e-07], 'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:59(calculate_z_serial_purepython)': [2, 2, 1.1e-06, 1.1e-06]}, 'display_name': '~:0(<built-in method builtins.len>)'}, '~:0(<built-in method builtins.print>)': {'children': {}, 'stats': [3, 3, 0.002032, 0.002032], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [3, 3, 0.002032, 0.002032]}, 'display_name': '~:0(<built-in method builtins.print>)'}, '~:0(<built-in method builtins.sum>)': {'children': {}, 'stats': [1, 1, 0.006536800000000001, 0.006536800000000001], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [1, 1, 0.006536800000000001, 0.006536800000000001]}, 'display_name': '~:0(<built-in method builtins.sum>)'}};
+function sv_build_hierarchy(
+node_name, depth, max_depth, cutoff, node_time, parent_name, call_stack) {
+// track visited functions so we can avoid infinitely displaying
+// instances of recursion
+if (_.isUndefined(call_stack)) {
+var call_stack = Immutable.Set([node_name])
+} else {
+var call_stack = call_stack.add(node_name);
+};
+var data = {
+name: node_name,
+display_name: stats[node_name]['display_name'],
+time: node_time,
+cumulative: stats[node_name]['stats'][3],
+parent_name: parent_name
+};
+if (depth < max_depth && !_.isEmpty(stats[node_name]['children'])) {
+child_names = {};
+for (var child_name in stats[node_name]['children']) {
+// Cut off children that have already been visited (recursion)
+if (!call_stack.contains(child_name)) {
+child_names[child_name] = stats[node_name]['children'][child_name];
+}
+}
+// Normalize the child times.
+// Unfortunately, stats[child_name]['callers'][node_name][3] doesn't
+// give us the time that child spend under node in this instance, but
+// in all instances across the call tree. Yikes!
+// This may lead to unexpected behavior, e.g., the child times add up
+// to more than the node time. A normalization is necessary.
+var child_times = {};
+var total_children_time = 0.0;
+for (var child_name in child_names) {
+child_times[child_name] = stats[child_name]['callers'][node_name][3];
+total_children_time += child_times[child_name];
+}
+if (total_children_time > node_time) {
+for (var child_name in child_names) {
+child_times[child_name] *= (node_time / total_children_time);
+}
+}
+data['children'] = [];
+// recurse
+for (var child_name in child_names) {
+if (child_times[child_name]/node_time > cutoff) {
+data['children'].push(
+sv_build_hierarchy(
+child_name, depth+1, max_depth, cutoff,
+child_times[child_name], node_name, call_stack
+));
+}
+}
+// D3, the plotting framework, only accounts for times in the leaf
+// nodes. Hence, if the node_time exceeds the total time in its
+// children, we need to add another child node to account for the the
+// time spent in node itself.
+if (total_children_time < node_time) {
+data['children'].push({
+name: node_name,
+display_name: data['display_name'],
+parent_name: data['parent_name'],
+cumulative: stats[node_name]['stats'][3],
+time: node_time - total_children_time
+});
+}
+}
+return data;
+}
+self.onmessage = function (event) {
+// Try loading JS from CDN in case snakeviz server is off
+try {
+importScripts(
+"https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.1/immutable.min.js",
+"https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js");
+}
+// If the user is offline try loading from the SnakeViz server
+catch (e) {
+try {
+importScripts(
+event.data['url'] + "/static/vendor/immutable.min.js",
+event.data['url'] + "/static/vendor/lodash.min.js");
+}
+catch (e) {
+throw 'Could not load JS libraries in worker.';
+}
+}
+var depth = 0;
+var max_depth = event.data['depth'];
+var cutoff = event.data['cutoff'];
+var node_name = event.data['name'];
+var parent_name = event.data['parent_name'];
+var node_time = stats[node_name]['stats'][3];
+self.postMessage(JSON.stringify(
+sv_build_hierarchy(
+node_name, depth, max_depth, cutoff, node_time, parent_name
+)));
+};
+</script>
+<!-- Load SnakeViz JS Files -->
+<script src="SnakeViz%20to%20visualize_files/snakeviz.js"></script>
+<script src="SnakeViz%20to%20visualize_files/drawsvg.js"></script>
+<!-- Do initial setup stuff -->
+<script>
+// Initialize data
+$(document).ready(_.defer(function () {
+var profile_data = {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': {'children': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:59(calculate_z_serial_purepython)': [1, 1, 7.8241991, 12.0587786], '~:0(<built-in method time.time>)': [2, 2, 2.0000000000000003e-06, 2.0000000000000003e-06], "~:0(<method 'append' of 'list' objects>)": [2002000, 2002000, 0.1704795, 0.1704795], '~:0(<built-in method builtins.len>)': [2, 2, 8.000000000000001e-07, 8.000000000000001e-07], '~:0(<built-in method builtins.print>)': [3, 3, 0.002032, 0.002032], '~:0(<built-in method builtins.sum>)': [1, 1, 0.006536800000000001, 0.006536800000000001]}, 'stats': [1, 1, 0.5278838, 12.7657135], 'callers': {}, 'display_name': 'JuliaSet.py:21(calc_pure_python)'}, 'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:59(calculate_z_serial_purepython)': {'children': {'~:0(<built-in method builtins.abs>)': [34219980, 34219980, 4.2345784, 4.2345784], '~:0(<built-in method builtins.len>)': [2, 2, 1.1e-06, 1.1e-06]}, 'stats': [1, 1, 7.8241991, 12.0587786], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [1, 1, 7.8241991, 12.0587786]}, 'display_name': 'JuliaSet.py:59(calculate_z_serial_purepython)'}, '~:0(<built-in method time.time>)': {'children': {}, 'stats': [2, 2, 2.0000000000000003e-06, 2.0000000000000003e-06], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [2, 2, 2.0000000000000003e-06, 2.0000000000000003e-06]}, 'display_name': '~:0(<built-in method time.time>)'}, "~:0(<method 'append' of 'list' objects>)": {'children': {}, 'stats': [2002000, 2002000, 0.1704795, 0.1704795], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [2002000, 2002000, 0.1704795, 0.1704795]}, 'display_name': "~:0(<method 'append' of 'list' objects>)"}, '~:0(<built-in method builtins.abs>)': {'children': {}, 'stats': [34219980, 34219980, 4.2345784, 4.2345784], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:59(calculate_z_serial_purepython)': [34219980, 34219980, 4.2345784, 4.2345784]}, 'display_name': '~:0(<built-in method builtins.abs>)'}, '~:0(<built-in method builtins.len>)': {'children': {}, 'stats': [4, 4, 1.9e-06, 1.9e-06], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [2, 2, 8.000000000000001e-07, 8.000000000000001e-07], 'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:59(calculate_z_serial_purepython)': [2, 2, 1.1e-06, 1.1e-06]}, 'display_name': '~:0(<built-in method builtins.len>)'}, '~:0(<built-in method builtins.print>)': {'children': {}, 'stats': [3, 3, 0.002032, 0.002032], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [3, 3, 0.002032, 0.002032]}, 'display_name': '~:0(<built-in method builtins.print>)'}, '~:0(<built-in method builtins.sum>)': {'children': {}, 'stats': [1, 1, 0.006536800000000001, 0.006536800000000001], 'callers': {'c:\\Users\\davii\\OneDrive - Mittuniversitetet\\Skrivbordet\\KTH\\Fjärde_år\\VT\\Intro_to_HPC(DD2358)\\Assignment_1\\task1.3\\JuliaSet.py:21(calc_pure_python)': [1, 1, 0.006536800000000001, 0.006536800000000001]}, 'display_name': '~:0(<built-in method builtins.sum>)'}};
+sv_json_cache = {};
+sv_worker = sv_make_worker();
+sv_root_func_name = sv_find_root(profile_data);
+sv_root_func_name__cached = sv_root_func_name;
+sv_call_stack = [sv_root_func_name];
+sv_total_time = profile_data[sv_root_func_name]['stats'][3];
+}));
+// Initialize the call stack button
+$(document).ready(_.defer(function () {
+sv_update_call_stack_list();
+sv_call_stack_btn_for_show();
+}));
+// Draw the visualization
+$(document).ready(_.defer(function () {
+sv_draw_vis(sv_root_func_name);
+}));
+</script>
+
+
+</body></html>
